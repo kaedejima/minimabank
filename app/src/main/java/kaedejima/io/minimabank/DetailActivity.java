@@ -43,6 +43,19 @@ public class DetailActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void delete(View view) {
+        final Memo memo = realm.where(Memo.class).equalTo("updateDate", getIntent().getStringExtra("updateDate")).findFirst();
+
+        realm.executeTransaction(new Realm.Transaction() {
+            @Override
+            public void execute(Realm realm) {
+                memo.deleteFromRealm();
+            }
+        });
+        Intent intent = new Intent(DetailActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();

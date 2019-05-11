@@ -8,7 +8,10 @@ import android.support.v4.math.MathUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.util.List;
@@ -21,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
     public ListView listView;
     TextView sumTextView;
     SharedPreferences pref;
+    private ProgressBar progressBar;
+    View backLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         listView = (ListView) findViewById(R.id.listView);
         sumTextView = (TextView) findViewById(R.id.sumTextView);
         pref=getSharedPreferences("倉庫", Context.MODE_PRIVATE);
+        progressBar = (ProgressBar)findViewById(R.id.progressBar);
+        backLayout = findViewById(R.id.view2);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -40,12 +47,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
 
     public void setMemoList() {
         RealmResults<Memo> results = realm.where(Memo.class).findAll();
         List<Memo> items = realm.copyFromRealm(results);
-
+        double point = 0;
         MemoAdapter adapter = new MemoAdapter(this, R.layout.layout_item_memo, items);
         listView.setAdapter(adapter);
         int sum1 = 0;
@@ -53,7 +61,18 @@ public class MainActivity extends AppCompatActivity {
             sum1 += Integer.parseInt(item.title);
         }
         int setNum = pref.getInt("設定金額",20000);
+        progressBar.setMax(100);
         sumTextView.setText(String.valueOf(setNum-sum1));
+        if((setNum-sum1)<0) point = setNum;
+        else point = (double) sum1/ (double) setNum;
+        progressBar.setProgress((int)(point *100));
+
+        LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
+        param.weight = (float) point;
+        // edited here
+        if (backLayout != null) {
+            backLayout.setLayoutParams(param);
+        }
     }
 
     @Override

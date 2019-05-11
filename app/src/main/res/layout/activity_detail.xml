@@ -29,13 +29,33 @@
             android:inputType="textPersonName"
             android:text="Name" />
 
-        <Button
-            android:id="@+id/button"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#b71c1c"
-            android:onClick="update"
-            android:text="UPDATE"
-            android:textColor="#eceff1" />
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="#b71c1c"
+                android:onClick="delete"
+                android:text="DELETE"
+                android:textColor="#eceff1" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="#1C3EB7"
+                android:onClick="update"
+                android:text="UPDATE"
+                android:textColor="#eceff1" />
+        </LinearLayout>
+
     </LinearLayout>
 </RelativeLayout>

@@ -19,6 +19,27 @@
         app:fabSize="normal" />
 
     <LinearLayout
+        android:id="@+id/backLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:backgroundTint="#59FF5100" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -39,7 +60,11 @@
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="match_parent"
             android:layout_height="50sp"
-            android:background="#C8E6C9" />
+            android:layout_margin="2dp"
+            android:background="#00C8E6C9"
+            android:max="100"
+            android:progress="100"
+            android:progressTint="#FFD12020" />
 
         <ListView
             android:id="@+id/listView"
