@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         progressBar.setMax(100);
         sumTextView.setText(String.valueOf(setNum-sum1));
         if((setNum-sum1)<0) point = setNum;
-        else point = (double) sum1/ (double) setNum;
+        else point = 1-((double) sum1/ (double) setNum);
         progressBar.setProgress((int)(point *100));
 
         LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
