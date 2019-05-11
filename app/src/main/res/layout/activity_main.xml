@@ -30,6 +30,7 @@
             android:layout_margin="20dp"
             android:layout_weight="1"
             android:gravity="center"
+            android:onClick="setmoney"
             android:text="0"
             android:textSize="50sp" />
 
