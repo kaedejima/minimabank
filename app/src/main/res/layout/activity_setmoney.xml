@@ -14,8 +14,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="¥"
-            android:inputType="number" />
+            android:hint="title"
+            android:inputType="textPersonName"
+            android:text="Name" />
 
         <EditText
             android:id="@+id/contentEditText"
@@ -25,15 +26,16 @@
             android:ems="10"
             android:gravity="top"
             android:hint="memo"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:text="Name" />
 
         <Button
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#b71c1c"
-            android:onClick="create"
-            android:text="CREATE"
+            android:onClick="update"
+            android:text="UPDATE"
             android:textColor="#eceff1" />
     </LinearLayout>
 </RelativeLayout>
