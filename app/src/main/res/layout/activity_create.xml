@@ -2,12 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp">
+    android:background="@color/colorPrimary">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_margin="16dp">
 
         <EditText
             android:id="@+id/titleEditText"
@@ -15,7 +16,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="¥"
-            android:inputType="number" />
+            android:inputType="number"
+            android:textColor="@color/colorText"/>
 
         <EditText
             android:id="@+id/contentEditText"
@@ -25,15 +27,16 @@
             android:ems="10"
             android:gravity="top"
             android:hint="memo"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:textColor="@color/colorText"/>
 
         <Button
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#b71c1c"
+            android:background="@color/colorAccent"
             android:onClick="create"
             android:text="CREATE"
-            android:textColor="#eceff1" />
+            android:textColor="@color/colorPrimaryDark" />
     </LinearLayout>
 </RelativeLayout>

@@ -16,6 +16,7 @@
         android:onClick="create"
         android:src="@drawable/ic_add"
         android:text="作成"
+        app:backgroundTint="#FFAF20"
         app:fabSize="normal" />
 
     <LinearLayout
@@ -28,7 +29,8 @@
             android:id="@+id/view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:background="#10455B"/>
 
         <View
             android:id="@+id/view2"
@@ -36,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#FFFFFF"
-            android:backgroundTint="#59FF5100" />
+            android:backgroundTint="#10455B"/>
     </LinearLayout>
 
     <LinearLayout
@@ -44,33 +46,55 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/sumTextView"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
+            android:layout_marginTop="20sp"
             android:layout_weight="1"
-            android:gravity="center"
-            android:onClick="setmoney"
-            android:text="0"
-            android:textSize="50sp" />
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40sp"
+                android:layout_marginTop="20sp"
+                android:text="¥"
+                android:textSize="37sp"
+                android:textColor="#F9F3ED"/>
+
+            <TextView
+                android:id="@+id/sumTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:gravity="center"
+                android:onClick="setmoney"
+                android:text="0"
+                android:textSize="50sp"
+                android:textColor="#F9F3ED"/>
+        </LinearLayout>
 
         <ProgressBar
             android:id="@+id/progressBar"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="match_parent"
             android:layout_height="50sp"
-            android:layout_margin="2dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:background="#00C8E6C9"
             android:max="100"
             android:progress="100"
-            android:progressTint="#FFD12020" />
+            android:progressTint="#FFAF20" />
 
         <ListView
             android:id="@+id/listView"
             android:layout_width="match_parent"
             android:layout_height="452dp"
-            android:layout_weight="1" />
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:textColor="#F9F3ED" />
     </LinearLayout>
 
 </RelativeLayout>
