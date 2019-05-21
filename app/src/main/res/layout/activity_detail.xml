@@ -21,7 +21,8 @@
             android:ems="10"
             android:hint="¥"
             android:inputType="numberDecimal"
-            android:textColor="@color/colorText" />
+            android:textColor="@color/colorText"
+            android:textColorHint="@color/colorText" />
 
         <EditText
             android:id="@+id/contentEditText"
@@ -32,7 +33,8 @@
             android:gravity="top"
             android:hint="memo"
             android:inputType="textShortMessage"
-            android:textColor="@color/colorText" />
+            android:textColor="@color/colorText"
+            android:textColorHint="@color/colorText" />
 
         <LinearLayout
             android:layout_width="match_parent"

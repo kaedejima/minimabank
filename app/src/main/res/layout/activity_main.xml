@@ -7,7 +7,7 @@
     <android.support.design.widget.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
@@ -15,7 +15,7 @@
         android:layout_marginBottom="16dp"
         android:onClick="create"
         android:src="@drawable/ic_add"
-        android:text="作成"
+        android:text="@string/button"
         app:backgroundTint="#FFAF20"
         app:fabSize="normal" />
 
@@ -48,7 +48,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="150dp"
             android:layout_marginTop="20sp"
             android:layout_weight="1"
             android:orientation="horizontal">
@@ -57,29 +57,30 @@
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="40sp"
+                android:layout_gravity="center"
+                android:layout_marginStart="40sp"
                 android:layout_marginTop="20sp"
-                android:text="¥"
-                android:textSize="37sp"
-                android:textColor="#F9F3ED"/>
+                android:text="@string/yen"
+                android:textColor="#F9F3ED"
+                android:textSize="37sp" />
 
             <TextView
                 android:id="@+id/sumTextView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="40sp"
                 android:gravity="center"
                 android:onClick="setmoney"
-                android:text="0"
-                android:textSize="50sp"
-                android:textColor="#F9F3ED"/>
+                android:text="@string/number"
+                android:textColor="#F9F3ED"
+                android:textSize="50sp" />
         </LinearLayout>
 
         <ProgressBar
             android:id="@+id/progressBar"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="match_parent"
-            android:layout_height="50sp"
+            android:layout_height="45sp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:background="#00C8E6C9"
@@ -91,10 +92,12 @@
             android:id="@+id/listView"
             android:layout_width="match_parent"
             android:layout_height="452dp"
+            android:layout_alignBottom="@+id/null"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:textColor="#F9F3ED" />
+            android:cacheColorHint="@color/colorText"
+            android:textColor="@color/colorText" />
     </LinearLayout>
 
 </RelativeLayout>

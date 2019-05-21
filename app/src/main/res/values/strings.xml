@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">MinimaBank</string>
+    <string name="yen">¥</string>
+    <string name="number">0</string>
+    <string name="button">作成</string>
 </resources>
