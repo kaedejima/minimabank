@@ -24,9 +24,9 @@
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:progressTint="@color/colorAccent"
+            android:max="100"
             android:progress="100"
-            android:max="100"/>
+            android:progressTint="@color/colorText" />
 
         <EditText
             android:id="@+id/titleEditText"
