@@ -40,7 +40,7 @@
             android:hint="¥"
             android:inputType="numberDecimal"
             android:textColor="@color/colorText"
-            android:textColorHint="@color/colorText" />
+            android:textColorHint="#C7C1BE" />
 
         <EditText
             android:id="@+id/contentEditText"
@@ -52,7 +52,7 @@
             android:hint="memo"
             android:inputType="textShortMessage"
             android:textColor="@color/colorText"
-            android:textColorHint="@color/colorText" />
+            android:textColorHint="#C7C1BE" />
 
         <LinearLayout
             android:layout_width="match_parent"

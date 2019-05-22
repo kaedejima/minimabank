@@ -35,10 +35,11 @@
             android:layout_weight="1"
             android:ems="10"
             android:gravity="top"
-            android:hint="title"
+            android:hint="2000"
             android:inputType="textPersonName"
             android:text="¥0"
-            android:textColor="@color/colorText" />
+            android:textColor="@color/colorText"
+            android:textColorHint="#C7C1BE" />
 
         <Button
             android:id="@+id/button"
@@ -46,7 +47,7 @@
             android:layout_height="wrap_content"
             android:background="@color/colorAccent"
             android:onClick="update"
-            android:text="UPDATE"
+            android:text="SET"
             android:textColor="@color/colorPrimaryDark" />
     </LinearLayout>
 </RelativeLayout>

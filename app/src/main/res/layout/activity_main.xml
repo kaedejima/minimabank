@@ -60,20 +60,23 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="40sp"
                 android:layout_marginTop="20sp"
+                android:layout_marginBottom="20sp"
                 android:text="@string/yen"
                 android:textColor="#F9F3ED"
-                android:textSize="37sp" />
+                android:textSize="45sp" />
 
             <TextView
                 android:id="@+id/sumTextView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="40sp"
+                android:layout_marginEnd="20sp"
                 android:gravity="center"
                 android:onClick="setmoney"
                 android:text="@string/number"
                 android:textColor="#F9F3ED"
                 android:textSize="50sp" />
+
         </LinearLayout>
 
         <ProgressBar
