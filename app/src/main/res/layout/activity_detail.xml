@@ -14,6 +14,24 @@
         android:layout_marginBottom="16dp"
         android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Edit"
+            android:textStyle="bold"
+            android:textColor="@color/colorText"
+            android:textSize="24sp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:progressTint="@color/colorAccent"
+            android:progress="100"
+            android:max="100"/>
+
         <EditText
             android:id="@+id/titleEditText"
             android:layout_width="match_parent"

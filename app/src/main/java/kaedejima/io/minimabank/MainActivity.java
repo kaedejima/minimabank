@@ -4,8 +4,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.math.MathUtils;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
@@ -47,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
 
     public void setMemoList() {
@@ -96,4 +97,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, SetmoneyActivity.class);
         startActivity(intent);
     }
+
+    public void onBackPressed() {
+        moveTaskToBack(true);
+    }
+
 }

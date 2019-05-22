@@ -10,6 +10,24 @@
         android:layout_margin="16dp"
         android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Set Goal"
+            android:textStyle="bold"
+            android:textColor="@color/colorText"
+            android:textSize="24sp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar4"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progressTint="@color/colorAccent"
+            android:progress="100"
+            android:max="100"/>
+
         <EditText
             android:id="@+id/titleEditText"
             android:layout_width="match_parent"
@@ -19,7 +37,7 @@
             android:gravity="top"
             android:hint="title"
             android:inputType="textPersonName"
-            android:text="Name"
+            android:text="¥0"
             android:textColor="@color/colorText" />
 
         <Button
