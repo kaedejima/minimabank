@@ -1,5 +1,6 @@
 package kaedejima.io.minimabank;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -43,7 +44,7 @@ public class CreateActivity extends AppCompatActivity {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.JAPANESE);
         String updateDate = sdf.format(date);
         String content = contentEditText.getText().toString();
-        check(title,updateDate,content);
+        check(title, updateDate, content);
         save(title, updateDate, content);
         finish();
     }
